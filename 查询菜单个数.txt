@@ -1,0 +1,30 @@
+--查询所有菜单
+select 
+a.func_id as cat1_id,
+a.name as cat1_name,
+b.func_id as cat2_id,
+b.name as cat2_name,
+c.func_id as cat3_id,
+c.name as cat3_name,
+d.func_id as cat4_id,
+d.name as cat4_name
+
+from SEC.SEC_FUNCTION a 
+
+
+left join SEC.SEC_FUNCTION b
+on a.func_id=b.parent_id and b.state='1'
+
+left join SEC.SEC_FUNCTION c
+on b.func_id=c.parent_id and c.state='1'
+
+left join SEC.SEC_FUNCTION d
+on c.func_id=d.parent_id and d.state='1'
+
+where a.parent_id='-1' and a.state='1'
+
+
+--查询单个菜单
+SELECT * FROM SEC.SEC_FUNCTION T where state='1'  and parent_id='-1';  --一级菜单
+SELECT * FROM SEC.SEC_FUNCTION T where state='1'  and parent_id='77772999'; --二级菜单
+SELECT * FROM SEC.SEC_FUNCTION T where state='1'  and parent_id='77772140'; --三级菜单
