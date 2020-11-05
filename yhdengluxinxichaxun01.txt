@@ -1,0 +1,14 @@
+//用户登录信息查询  13989988923;
+//登录页面;
+com.Loginpage.login("92220093","Asia!@34");
+//号码登录;
+com.LoginOp.loginbynumber(phone);
+//登录用户信息查询框;
+com.LoginOp.intomenu("用户登录信息查询 ");
+//点击查询框;
+click(chaxun_x);
+//输入登录号码
+input(dengluhaoma_x, phone);
+//点击查询按钮
+click(chaxunButton_x);
+waitamoment("3");

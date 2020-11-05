@@ -1,0 +1,7 @@
+//用户登录信息查询查询;
+//查询框;
+chaxun_x=//*[@id="qryBox"]/input;
+//登录号码输入框;
+dengluhaoma_x=//*[@id="query_ACCESS_NUM"];
+//查询按钮;
+chaxunButton_x=//*[@id="qryButton"];
